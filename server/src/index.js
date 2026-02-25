@@ -10,7 +10,12 @@ import { errorHandler } from './middleware/errorHandler.js';
 const app = express();
 
 app.use(helmet());
-app.use(cors({ origin: env.clientUrl }));
+app.use(cors({
+  origin: env.clientUrl.includes(',')
+    ? env.clientUrl.split(',').map(u => u.trim())
+    : env.clientUrl,
+  credentials: true,
+}));
 app.use(morgan('dev'));
 app.use(express.json({ limit: '5mb' }));
 

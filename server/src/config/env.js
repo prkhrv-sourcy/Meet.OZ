@@ -2,19 +2,12 @@ import dotenv from 'dotenv';
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
+// Load .env from root in local dev (Render/production sets env vars directly)
 const __dirname = dirname(fileURLToPath(import.meta.url));
 dotenv.config({ path: resolve(__dirname, '../../../.env') });
 
-const required = ['AGORA_APP_ID', 'AGORA_APP_CERTIFICATE'];
-
-for (const key of required) {
-  if (!process.env[key]) {
-    console.warn(`Warning: Missing env var ${key}`);
-  }
-}
-
 export default {
-  port: process.env.PORT || 5000,
+  port: process.env.PORT || 5001,
   mongoUri: process.env.MONGODB_URI || 'mongodb://localhost:27017/meetoz',
   agoraAppId: process.env.AGORA_APP_ID || '',
   agoraAppCertificate: process.env.AGORA_APP_CERTIFICATE || '',
