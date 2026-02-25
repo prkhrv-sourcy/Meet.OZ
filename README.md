@@ -4,6 +4,10 @@
 
 Meet.OZ analyzes participant emotions during video calls using face-api.js, provides live AI coaching tips via Gemini 2.0 Flash, and generates comprehensive post-meeting analytics with charts, summaries, and sentiment Q&A.
 
+<p align="center">
+  <img src="demo/homepage.png" alt="Meet.OZ Home" width="700" />
+</p>
+
 ---
 
 ## Features
