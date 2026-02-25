@@ -165,6 +165,41 @@ This starts both servers concurrently:
 
 ---
 
+## Use Cases — Who Is This For?
+
+Meet.OZ is fully open-source and self-hostable, meaning your meeting data never leaves your infrastructure. Here's how different organizations can leverage it:
+
+### Corporate & Enterprise
+- **Internal meetings** — Track engagement across departments, identify disengaged teams, and coach presenters with real-time AI tips
+- **Sales calls** — Measure prospect reactions in real time, get post-call sentiment breakdowns, and refine pitch delivery based on emotional arc data
+- **All-hands & town halls** — Gauge company-wide sentiment during announcements, flag moments where engagement drops, and generate structured summaries for async viewers
+- **HR & interviews** — Standardize interview evaluation with emotion-backed analytics, reduce bias with data-driven candidate assessments
+
+### Education & Universities
+- **Online lectures** — Instructors see live engagement meters to know when students are losing focus, and can review emotion timelines to improve future sessions
+- **Classroom assessments** — Track student reactions during presentations, provide AI-generated feedback on delivery and audience engagement
+- **Remote tutoring** — Tutors get real-time coaching tips to adjust their teaching style based on student emotions
+
+### Healthcare & Therapy
+- **Telehealth sessions** — Therapists can review emotional arcs from sessions (with patient consent) to track progress over time
+- **Support groups** — Facilitators monitor group sentiment in real time and receive AI nudges to address discomfort or disengagement
+
+### Training & Workshops
+- **Corporate training** — L&D teams measure which modules resonate and which lose participants, with per-section emotion breakdowns
+- **Public speaking coaching** — Speakers review their audience's emotional response timeline, get AI-scored presenter effectiveness, and receive actionable improvement tips
+
+### Why Self-Host?
+
+| Benefit | Detail |
+|---------|--------|
+| **Data privacy** | All meeting data (video metadata, emotions, transcripts) stays on your own MongoDB instance — nothing is sent to third-party analytics services |
+| **Compliance** | Meet GDPR, HIPAA, or internal data residency requirements by hosting within your own cloud or on-premise infrastructure |
+| **Customization** | Fork and extend — add SSO, custom AI prompts, branded UI, or integrate with your existing tools |
+| **No vendor lock-in** | Swap out Agora for another WebRTC provider, replace Gemini with any LLM, or switch MongoDB for another database |
+| **Cost control** | Only pay for the infrastructure you actually use — no per-seat SaaS pricing |
+
+---
+
 ## Deployment
 
 ### Server — Render (free tier)
