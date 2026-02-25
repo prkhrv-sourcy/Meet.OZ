@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-surface-dark text-white antialiased;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  ::selection {
+    background: rgba(204, 182, 108, 0.3);
+    color: white;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/[0.03] backdrop-blur-2xl border border-white/[0.06] shadow-card;
+  }
+  .glass-hover {
+    @apply hover:bg-white/[0.06] hover:border-white/[0.1] hover:shadow-card-hover transition-all duration-300;
+  }
+  .gradient-border {
+    position: relative;
+  }
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(204, 182, 108, 0.3), transparent 50%, rgba(204, 182, 108, 0.1));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gold-gradient;
+  }
+}
